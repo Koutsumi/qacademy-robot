@@ -27,3 +27,17 @@ O comando "source robot/bin/activate" ativa o virtualEnv (necessário para rodar
 
 #### Rodar o teste
     robot <nomeDoArquivo>.robot
+
+## Comandos para iniciar o playwright
+    pip install robotframework-browser
+    rfbrowser init
+
+## Anotações
+### Problemas com o pip
+    curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
+    curl -sS https://bootstrap.pypa.io/get-pip.py | sudo python3.10
+
+    curl -sS https://bootstrap.pypa.io/get-pip.py | python3
+    curl -sS https://bootstrap.pypa.io/get-pip.py | sudo python3
+
+O python 3.10 tem um problema para dar upgrade na versão do pip, única solução para atualizar o pip foi com esses 4 comandos
