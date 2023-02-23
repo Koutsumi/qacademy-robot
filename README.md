@@ -24,6 +24,7 @@ No linux precisei criar uma virtualEnv para criar um environment para o python r
     python3 -m venv ./robot
 
 O comando "source robot/bin/activate" ativa o virtualEnv (necessário para rodar os testes)
+OBS.: Após atualizar o PYTHON/PIP não precisa rodar esse comando
 
 #### Rodar o teste
     robot <nomeDoArquivo>.robot
@@ -31,6 +32,9 @@ O comando "source robot/bin/activate" ativa o virtualEnv (necessário para rodar
 ## Comandos para iniciar o playwright
     pip install robotframework-browser
     rfbrowser init
+## Rodar o testes e salvar os logs em uma pasta
+    robot -d ./logs tests/online.robot
+Salva os relatórios de execução na pasta logs
 
 ## Anotações
 ### Problemas com o pip
