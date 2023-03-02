@@ -3,7 +3,7 @@ Library     Browser
 
 *** Keywords ***
 Go to Login Page
-    New Browser    headless=False    browser=chromium
+    New Browser    headless=False    browser=firefox
     New page       http://localhost:3000
 
 Fill Credentials
