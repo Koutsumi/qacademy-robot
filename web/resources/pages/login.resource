@@ -16,12 +16,12 @@ Submit Credentials
     #   Click          text=Entrar no sistema   
     #   Click          xpath=//button[text()="Entrar no sistema"]
 
-Verify Toaster      
-    Wait For Elements State
-    ...    css=.Toastify__toast-body div >> text=Suas credenciais são inválidas, por favor tente novamente!
-    ...    visible    5
+Field Type Should Be Email
+    Get Attribute   css=input[placeholder="Seu e-mail"]    
+    ...    type    equal    email
 
-User Should Be Logged In 
-    ${logged_user}     Set Variable       css=aside strong
-    Wait For Elements State     ${logged_user}    visible    15
-    Get Text       ${logged_user}    equal    Admin
+Alert Text Should Be
+    [Arguments]    ${field}    ${expected_text}
+    
+    Get Text    xpath=//input[@type="${field}"]/..//span
+    ...    equal    ${expected_text}
