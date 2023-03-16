@@ -1,2 +1,4 @@
 robot
 rfbrowser.log
+logs
+__pycache__

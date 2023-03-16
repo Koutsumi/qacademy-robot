@@ -1,5 +1,6 @@
 *** Settings ***
 Library     Browser
+Library     libs/DateTricks.py
 
 *** Keywords ***
 Go To Enrolls
@@ -20,13 +21,14 @@ Select Plan
     Click    css=div[class$=option] >> text=${student_plan}
 
 Fill Start Date
-    [Arguments]    ${start_date}
+
     Focus   css=input[name="start_date"]
-    Keyboard Key    press    0  
-    Keyboard Key    press    7
-    Keyboard Key    press    0
-    Keyboard Key    press    3
-    Keyboard Key    press    2
-    Keyboard Key    press    0
-    Keyboard Key    press    2
-    Keyboard Key    press    3  
+    ${start_date}    Get Start Date
+
+    # forEach em robot start_date.forEach(number => {função})
+    FOR    ${number}    IN    @{start_date}
+        Keyboard Key    press    ${number}
+    END
+
+Submit Enroll Form
+    Click    css=button >> text=Salvar
