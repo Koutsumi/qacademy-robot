@@ -12,8 +12,8 @@ Go To Enrolls Form
 Select Student
     [Arguments]    ${student_name}
     Fill Text     xpath=//div[contains(text(), "nome do aluno")]/..//input
-    ...    ${student_name}
-    Click    css=div[class$=option] >> text=${student_name}
+    ...           ${student_name}
+    Click         css=div[class$=option] >> text=${student_name}
     
 Select Plan
     [Arguments]    ${student_plan}    

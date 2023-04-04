@@ -7,6 +7,9 @@ Resource    pages/login.resource
 Resource    pages/enroll.resource
 Resource    database.resource
 
+Resource    services/sessions.resource
+Resource    services/students.resource
+
 Library    JSONLibrary
 
 *** Keywords ***
@@ -15,7 +18,7 @@ Do Login
     [Arguments]    ${user}
 
     Go to Login Page
-    Fill Credentials    ${user}[email]     ${user}[pass]
+    Fill Credentials    ${user}[email]     ${user}[password]
     Submit Credentials
     User Should Be Logged In    ${user}[name]
 
