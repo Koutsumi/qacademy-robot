@@ -45,3 +45,7 @@ Salva os relatórios de execução na pasta logs
     curl -sS https://bootstrap.pypa.io/get-pip.py | sudo python3
 
 O python 3.10 tem um problema para dar upgrade na versão do pip, única solução para atualizar o pip foi com esses 4 comandos
+
+### Executar o Android Studio no ubuntu
+ - Acessar a pasta /usr/local/android-studio/bin
+ - Executar o comando ``` ./studio.sh ```
